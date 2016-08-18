@@ -74,7 +74,10 @@
                     <div class="intro-text">
                         <span class="name">The Fields Closest to you Are:</span>
                         <hr class="star-light">
-                        <span class="skills"><%=@soccer_field%></span>
+                        <span class="skills"><%@soccer_field.each do |fields|%>
+                      <%=fields%>
+                       <br>   
+                      <%end%></span>
                     </div>
                 </div>
             </div>
@@ -172,8 +175,9 @@
                 </div>
                 <div class="col-lg-4">
                   <form method="POST" action="/soccer_result">
-                    <center><input type="text" name="soccer_zip">
-                    <input type="submit"></center>
+                    <center><font color=black><input type="text" name="soccer_zip"></font>
+                      <br>
+                    <input type="submit" class="btn btn-success btn-lg"></center>
                   </form>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">

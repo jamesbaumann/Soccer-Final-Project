@@ -74,7 +74,7 @@
                     <div class="intro-text">
                         <span class="name">Find your field</span>
                         <hr class="star-light">
-                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                        <span class="skills">Find the sports fields you want near you.</span>
                     </div>
                 </div>
             </div>
@@ -165,17 +165,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <center>
+              <center>
                       <h1>What is the zip code you would like to search for?</h1>
+              </center>
+              <br>
+<!--                 <div class="col-lg-4"> -->
+                  <center>
+                    <form method="POST" action="/soccer_result">
+                      <font color=#18BC9C>
+                      <input type="text" name="soccer_result" class="search_bar">
+                      </font>
+                      <br>
+                    <input type="submit" class="btn btn-success btn-lg">
+                    </form>
                   </center>
-                </div>
-                <div class="col-lg-4">
-                  <form method="POST" action="/soccer_result">
-                    <input type="text" name="soccer_result">
-                    <input type="submit">
-                  </form>
-                </div>
+<!--                 </div> -->
 
             </div>
         </div>

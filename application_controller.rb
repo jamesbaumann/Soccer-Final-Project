@@ -13,8 +13,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/soccer_result' do
-
-    @soccer_field = soccer_zips(params[:soccer_result])
+    @soccer_field = soccer_zips(params[:soccer_result].to_i)
     erb :soccer_result
   end
 
