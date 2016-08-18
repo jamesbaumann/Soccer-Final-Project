@@ -41,7 +41,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Find your field</a>
+                <a class="navbar-brand" href="#page-top">Find your pool</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,9 +72,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-text">
-                        <span class="name">Find your field</span>
+                        <span class="name">The pools closest to you are:</span>
                         <hr class="star-light">
-                        <span class="skills">Find soccer fields near you.</span>
+                        <span class="skills"><%@swimming_pool.each do |courts|%>
+                      <%=courts%>
+                       <br>
+                      <%end%></span>
                     </div>
                 </div>
             </div>
@@ -91,13 +94,13 @@
                 </div>
             </div>
             <div class="row">
-              <a href="http://main-coding-stuff-205030.nitrousapp.com/">
-              <img src="http://pre15.deviantart.net/4967/th/pre/f/2012/254/9/6/bliss_soccer_field_by_paullus23-d5efdrz.jpg" alt="Go to soccer search!" width="450" height="275" border="0" class="sports_pic" style="margin: 65px 65px 65px 65px;">
-              </a>
-               <a href="http://main-coding-stuff-205030.nitrousapp.com/tennis_home" class="sports_pic">
+             <a href="http://main-coding-stuff-205030.nitrousapp.com/" class="sports_pic">
+                          <img src="http://pre15.deviantart.net/4967/th/pre/f/2012/254/9/6/bliss_soccer_field_by_paullus23-d5efdrz.jpg" alt="Go to soccer search!" width="450" height="275" border="0" style="margin: 65px 65px 65px 65px;">
+             </a>
+              <a href="http://main-coding-stuff-205030.nitrousapp.com/tennis_home" class="sports_pic">
                 <img src="http://static1.squarespace.com/static/563032b9e4b0465682348ce1/t/56cccd8cc6fc08356f9df8fc/1456262575475/" alt="Go to soccer search!" width="450" height="275" border="0" style="margin: 65px 65px 65px 65px;">
               </a>
-             <a href="http://main-coding-stuff-205030.nitrousapp.com/swimming_home">
+              <a href="http://main-coding-stuff-205030.nitrousapp.com/swimming_home">
                 <img src="http://www.aquaproduct.co.jp/english/img/product/title_aqua_14.jpg" alt="Go to soccer search!" width="450" height="275" border="0" class="sports_pic" style="margin: 65px 65px 65px 65px;">
               </a>
               <a href="http://main-coding-stuff-205030.nitrousapp.com/basketball_home">
@@ -168,34 +171,32 @@
     </section>
 
     <!-- About Section -->
-    <section class="success" id="about">
+<!--     <section class="success" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Search Manhattan</h2>
+                    <h2>Search</h2>
                     <hr class="star-light">
                 </div>
             </div>
             <div class="row">
-              <center>
+                <div class="col-lg-4 col-lg-offset-2">
+                    <center>
                       <h1>What is the zip code you would like to search for?</h1>
-              </center>
-              <br>
-<!--                 <div class="col-lg-4"> -->
-                  <center>
-                    <form method="POST" action="/soccer_result">
-                      <font color=#18BC9C>
-                      <input type="text" name="soccer_result" class="search_bar">
-                      </font>
-                      <br>
-                    <input type="submit" class="btn btn-success btn-lg">
-                    </form>
                   </center>
-<!--                 </div> -->
-<!-- font=family:Montserrat, Helvetica Neue,Helvetica,Arial,sans-serif; -->
+                </div>
+                <div class="col-lg-4">
+                  <form method="POST" action="/soccer_result">
+                    <center><font color=black><input type="text" name="soccer_zip"></font>
+                      <br>
+                    <input type="submit" class="btn btn-success btn-lg"></center>
+                  </form>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact">
