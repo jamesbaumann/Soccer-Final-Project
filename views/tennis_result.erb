@@ -75,10 +75,7 @@
                         <span class="name">The courts closest to you are:</span>
                         <hr class="star-light">
                         <span class="skills"><%@tennis_courts_array.each do |tennis_name_and_link|%>
-                          <%tennis_name_and_link.each do |courts|%>
-                      <%=courts%>
-                          <br>
-                          <%end%>
+                           <a href="<%=tennis_name_and_link[1]%>" style="color:white;"><%=tennis_name_and_link[0]%></a>
                        <br>
                       <%end%></span>
                     </div>

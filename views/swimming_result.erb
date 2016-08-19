@@ -75,10 +75,7 @@
                         <span class="name">The pools closest to you are:</span>
                         <hr class="star-light">
                         <span class="skills"><%@swimming_pools_array.each do |swimming_name_and_link|%>
-                          <%swimming_name_and_link.each do |pools|%>
-                      <%=pools%>
-                          <br>
-                          <%end%>
+                         <a href="<%=swimming_name_and_link[1]%>" style="color:white;"><%=swimming_name_and_link[0]%></a>
                        <br>
                       <%end%></span>
                     </div>

@@ -75,10 +75,7 @@
                         <span class="name">The Fields Closest to you Are:</span>
                         <hr class="star-light">
                         <span class="skills"><%@soccer_fields_array.each do |soccer_name_and_link|%>
-                      <%soccer_name_and_link.each do |fields|%>
-                          <%=fields%>
-                          <br>
-                          <%end%>
+                       <a href="<%=soccer_name_and_link[1]%>" style="color:white;"><%=soccer_name_and_link[0]%></a>
                        <br>
                       <%end%></span>
                     </div>
