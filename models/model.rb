@@ -30,31 +30,33 @@ def soccer_zips(soccer_zip)
 10030=>["Asphalt Green Upper East Side`http://www.asphaltgreen.org/"],
 10037=>["Asphalt Green Upper East Side`http://www.asphaltgreen.org/"],
 10039=>["Asphalt Green Upper East Side`http://www.asphaltgreen.org/"],
-10001=>["East River Park", "Soccer Field at Chelsea Park", "The Field House at Chelsea Piers"],
-10011=>["East River Park", "Soccer Field at Chelsea Park", "The Field House at Chelsea Piers"],
-10018=>["East River Park", "Soccer Field at Chelsea Park", "The Field House at Chelsea Piers"],
-10019=>["East River Park", "Soccer Field at Chelsea Park", "The Field House at Chelsea Piers"],
-10020=>["East River Park", "Soccer Field at Chelsea Park", "The Field House at Chelsea Piers"],
-10036=>["East River Park", "Soccer Field at Chelsea Park", "The Field House at Chelsea Piers"],
-10029=>["North Meadow"],
-10035=>["North Meadow"],
-10029=>["Randall’s Island Field 10"],
-10035=>["Randall’s Island Field 10"],
-10010=>["Bushwick Inlet Park"],
-10016=>["Bushwick Inlet Park"],
-10017=>["Bushwick Inlet Park"],
-10022=>["Bushwick Inlet Park"],
-10012=>["Pier 40"],
-10013=>["Pier 40"],
-10014=>["Pier 40"]
+10001=>["East River Park`https://www.nycgovparks.org/parks/east-river-park", "Soccer Field at Chelsea Park`https://www.nycgovparks.org/parks/chelsea-park", "The Field House at Chelsea Piers`http://www.chelseapiers.com/fh/"],
+10011=>["East River Park`https://www.nycgovparks.org/parks/east-river-park", "Soccer Field at Chelsea Park`https://www.nycgovparks.org/parks/chelsea-park", "The Field House at Chelsea Piers`http://www.chelseapiers.com/fh/"],
+10018=>["East River Park`https://www.nycgovparks.org/parks/east-river-park", "Soccer Field at Chelsea Park`https://www.nycgovparks.org/parks/chelsea-park", "The Field House at Chelsea Piers`http://www.chelseapiers.com/fh/"],
+10019=>["East River Park`https://www.nycgovparks.org/parks/east-river-park", "Soccer Field at Chelsea Park`https://www.nycgovparks.org/parks/chelsea-park", "The Field House at Chelsea Piers`http://www.chelseapiers.com/fh/"],
+10020=>["East River Park`https://www.nycgovparks.org/parks/east-river-park", "Soccer Field at Chelsea Park`https://www.nycgovparks.org/parks/chelsea-park", "The Field House at Chelsea Piers`http://www.chelseapiers.com/fh/"],
+10036=>["East River Park`https://www.nycgovparks.org/parks/east-river-park", "Soccer Field at Chelsea Park`https://www.nycgovparks.org/parks/chelsea-park", "The Field House at Chelsea Piers`http://www.chelseapiers.com/fh/"],
+10029=>["North Meadow`http://www.centralparknyc.org/things-to-see-and-do/attractions/north-meadow.html?referrer=https://www.google.com/"],
+10035=>["North Meadow`http://www.centralparknyc.org/things-to-see-and-do/attractions/north-meadow.html?referrer=https://www.google.com/"],
+10029=>["Randall’s Island Field 10`https://randallsisland.org/"],
+10035=>["Randall’s Island Field 10`https://randallsisland.org/"],
+10010=>["Bushwick Inlet Park`https://www.nycgovparks.org/parks/bushwick-inlet-park/"],
+10016=>["Bushwick Inlet Park`https://www.nycgovparks.org/parks/bushwick-inlet-park/"],
+10017=>["Bushwick Inlet Park`https://www.nycgovparks.org/parks/bushwick-inlet-park/"],
+10022=>["Bushwick Inlet Park`https://www.nycgovparks.org/parks/bushwick-inlet-park/"],
+10012=>["Pier 40`https://www.hudsonriverpark.org/vision-and-progress/planning-and-construction/pier-40"],
+10013=>["Pier 40`https://www.hudsonriverpark.org/vision-and-progress/planning-and-construction/pier-40"],
+10014=>["Pier 40`https://www.hudsonriverpark.org/vision-and-progress/planning-and-construction/pier-40"]
   }
 
   soccer_array = soccer_fields[soccer_zip]
+  new_soccer_array = []
 soccer_array.each do |field_name_link|
-  return soccer_info = field_name_link.split('`')
+  new_soccer_array << field_name_link.split('`')
 end
 
 #    tennis_answer = tennis_courts[tennis_zip]
+return new_soccer_array
 
 end
 puts soccer_zips(10028)

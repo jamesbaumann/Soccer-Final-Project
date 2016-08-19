@@ -49,11 +49,13 @@ def swimming_zips(swimming_zip)
 
 
   swimming_array = swimming_pools[swimming_zip]
+  new_swimming_array = []
 swimming_array.each do |pool_name_link|
-  return swimming_info = pool_name_link.split('`')
+  new_swimming_array << pool_name_link.split('`')
 end
 
 #    tennis_answer = tennis_courts[tennis_zip]
+return new_swimming_array
 
 end
 

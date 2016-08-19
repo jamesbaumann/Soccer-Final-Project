@@ -1,3 +1,5 @@
+require "pry"
+
 def basketball_zips(basketball_zip)
   basketball_courts = {
  10282=>["Basketball Court`https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=10282+basketball+court"],
@@ -6,7 +8,7 @@ def basketball_zips(basketball_zip)
  10012=>["Vesuvio Playground`https://www.nycgovparks.org/parks/vesuvio-playground","West 4th Street Courts`https://www.nycgovparks.org/parks/west-4th-street-courts/","The Cage`https://www.nycgovparks.org/parks/west-4th-street-courts/", "Corporal John A. Seravalli Playground`https://www.nycgovparks.org/parks/corporal-john-a-seravalli-playground/"],
  10014=>["Vesuvio Playground`https://www.nycgovparks.org/parks/vesuvio-playground","West 4th Street Courts`https://www.nycgovparks.org/parks/west-4th-street-courts/","The Cage`https://www.nycgovparks.org/parks/west-4th-street-courts/", "Corporal John A. Seravalli Playground`https://www.nycgovparks.org/parks/corporal-john-a-seravalli-playground/"],
  10013=>["Vesuvio Playground`https://www.nycgovparks.org/parks/vesuvio-playground","West 4th Street Courts`https://www.nycgovparks.org/parks/west-4th-street-courts/","The Cage`https://www.nycgovparks.org/parks/west-4th-street-courts/", "Corporal John A. Seravalli Playground`https://www.nycgovparks.org/parks/corporal-john-a-seravalli-playground/"],
- 10001=>["Penn South Playground'https://www.nycgovparks.org/parks/penn-south-playground/facilities/basketball","Gutenberg Playground`https://www.nycgovparks.org/parks/gutenberg-playground/facilities/basketball", "McCaffrey Playground`https://www.nycgovparks.org/parks/mccaffrey-playground", "Ramon Aponte Playground`https://www.nycgovparks.org/parks/ramon-aponte-park"],
+ 10001=>["Penn South Playground`https://www.nycgovparks.org/parks/penn-south-playground/facilities/basketball","Gutenberg Playground`https://www.nycgovparks.org/parks/gutenberg-playground/facilities/basketball", "McCaffrey Playground`https://www.nycgovparks.org/parks/mccaffrey-playground", "Ramon Aponte Playground`https://www.nycgovparks.org/parks/ramon-aponte-park"],
  10011=>["Penn South Playground`https://www.nycgovparks.org/parks/penn-south-playground/facilities/basketball","Gutenberg Playground`https://www.nycgovparks.org/parks/gutenberg-playground/facilities/basketball", "McCaffrey Playground`https://www.nycgovparks.org/parks/mccaffrey-playground", "Ramon Aponte Playground`https://www.nycgovparks.org/parks/ramon-aponte-park"],
  10018=>["Penn South Playground`https://www.nycgovparks.org/parks/penn-south-playground/facilities/basketball","Gutenberg Playground`https://www.nycgovparks.org/parks/gutenberg-playground/facilities/basketball", "McCaffrey Playground`https://www.nycgovparks.org/parks/mccaffrey-playground", "Ramon Aponte Playground`https://www.nycgovparks.org/parks/ramon-aponte-park"],
  10019=>["Penn South Playground`https://www.nycgovparks.org/parks/penn-south-playground/facilities/basketball","Gutenberg Playground`https://www.nycgovparks.org/parks/gutenberg-playground/facilities/basketball", "McCaffrey Playground`https://www.nycgovparks.org/parks/mccaffrey-playground", "Ramon Aponte Playground`https://www.nycgovparks.org/parks/ramon-aponte-park"],
@@ -49,12 +51,14 @@ def basketball_zips(basketball_zip)
 
 
   basketball_array = basketball_courts[basketball_zip]
-basketball_array.each do |court_name_link|
-  return basketball_info = court_name_link.split('`')
-end
+  new_array = []
+  basketball_array.each do |court_name_link|
+    new_array << court_name_link.split('`')
+  end
 
 #    tennis_answer = tennis_courts[tennis_zip]
-
+return new_array
+  
 end
 
-puts basketball_zips(10028)
+puts basketball_zips(10001)

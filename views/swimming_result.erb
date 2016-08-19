@@ -53,9 +53,9 @@
                     <li class="page-scroll">
                         <a href="#portfolio">Choose Sport</a>
                     </li>
-                    <li class="page-scroll">
+<!--                     <li class="page-scroll">
                         <a href="#about">Search</a>
-                    </li>
+                    </li> -->
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
@@ -74,8 +74,11 @@
                     <div class="intro-text">
                         <span class="name">The pools closest to you are:</span>
                         <hr class="star-light">
-                        <span class="skills"><%@swimming_pool.each do |courts|%>
-                      <%=courts%>
+                        <span class="skills"><%@swimming_pools_array.each do |swimming_name_and_link|%>
+                          <%swimming_name_and_link.each do |pools|%>
+                      <%=pools%>
+                          <br>
+                          <%end%>
                        <br>
                       <%end%></span>
                     </div>

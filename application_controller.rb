@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
 
 
   post '/soccer_result' do
-    @soccer_field = soccer_zips(params[:soccer_result].to_i)
+    @soccer_fields_array = soccer_zips(params[:soccer_result].to_i)
     erb :soccer_result
   end
 
@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/tennis_result' do
-    @tennis_court = tennis_zips(params[:tennis_result].to_i)
+    @tennis_courts_array = tennis_zips(params[:tennis_result].to_i)
     erb :tennis_result
   end
 
@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/swimming_result' do
-    @swimming_pool = swimming_zips(params[:swimming_result].to_i)
+    @swimming_pools_array = swimming_zips(params[:swimming_result].to_i)
     erb :swimming_result
   end
 
@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/basketball_result' do
-    @basketball_court = basketball_zips(params[:basketball_result].to_i)
+    @basketball_courts_array = basketball_zips(params[:basketball_result].to_i)
     erb :basketball_result
   end
 

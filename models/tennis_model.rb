@@ -46,15 +46,17 @@ def tennis_zips(tennis_zip)
   }
 
   tennis_array = tennis_courts[tennis_zip]
+  new_tennis_array = []
 tennis_array.each do |court_name_link|
-  return tennis_info = court_name_link.split('`')
+  new_tennis_array << court_name_link.split('`')
 end
 
 #    tennis_answer = tennis_courts[tennis_zip]
+return new_tennis_array
 
 end
 
-
+puts tennis_zips(10044)
 # tennis_courts_hash.each do |location, courts_name|
 #   puts "In your zipcode, #{location}, the closest field is #{courts_name}."
 # end
